@@ -9,8 +9,10 @@ html {
 }
 
 .page {
+    display: grid;
     inline-size: 1200px;
     block-size: 100%;
+    place-items: center;
     margin: auto;
     color: #fff;
     font-family: "Fira Sans Condensed", sans-serif;
@@ -48,4 +50,35 @@ ol {
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
     background-color: #d9d9d9;
+}
+
+.content {
+    display: flex;
+    align-items: flex-end;
+    gap: 30px;
+    inline-size: 1140px;
+}
+
+.search-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.content__list-container {
+    position: relative;
+    /* Свойство block-size в CSS задаёт размер элемента в направлении блока.
+       аналог width: 298px, height: 298px
+    */
+    block-size: 298px;
+    overflow: auto;
+}
+
+.content__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 26px;
+    inline-size: 100%;
+    block-size: 100%;
 }
