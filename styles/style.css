@@ -8,18 +8,6 @@ html {
     block-size: 100%;
 }
 
-.page {
-    display: grid;
-    inline-size: 1200px;
-    block-size: 100%;
-    place-items: center;
-    margin: auto;
-    color: #fff;
-    font-family: "Fira Sans Condensed", sans-serif;
-    font-size: 18px;
-    background-color: #1b1919;
-}
-
 h1,
 h2,
 h3,
@@ -52,17 +40,63 @@ ol {
     background-color: #d9d9d9;
 }
 
+.page {
+    display: grid;
+    inline-size: 1200px;
+    block-size: 100%;
+    place-items: center;
+    margin: auto;
+    color: #fff;
+    font-family: "Fira Sans Condensed", sans-serif;
+    font-size: 18px;
+    background-color: #1b1919;
+}
+
 .content {
     display: flex;
     align-items: flex-end;
     gap: 30px;
     inline-size: 1140px;
+    margin-top: 185px;
+}
+
+.result {
+    align-self: flex-end;
+}
+
+.result__video-container {
+    position: relative;
+
+    /* inline-size, block-size - мин. и макс размеры блока, не будет больше 711px, и не будет меньше 386px*/
+    inline-size: 711px;
+    block-size: 386px;
+
+    /* margin-block-end в CSS определяет внешний отступ от конечного края элемента по блочной оси.
+    аналог нижнего отступа - margin-block-end*/
+    margin-bottom: 16px;
+}
+
+.result__video {
+    width: 100%;
+    height: 100%;
+
+    /* растягивает картинку на размер видео */
+    object-fit: cover;
 }
 
 .search-form {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+.content__details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 26px;
+    inline-size: 100%;
+    block-size: 100%;
 }
 
 .content__list-container {
@@ -74,11 +108,33 @@ ol {
     overflow: auto;
 }
 
-.content__details {
+.content__list {
+    position: relative;
+
+    /* Свойство block-size в CSS задаёт размер элемента в направлении блока.
+    аналог width: 298px, height: 298px
+    */
+    block-size: 298px;
+    overflow: auto;
+}
+
+.content__list-item:not(:last-of-type) {
+    margin-block-end: 30px;
+}
+
+.content__video-card {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 26px;
-    inline-size: 100%;
-    block-size: 100%;
+    align-items: flex-start;
+}
+
+.content__video-card-description-container {
+    flex-grow: 1;
+}
+
+.content__video-card-thumbnail {
+    /* ширина - 194px, высота - 103px */
+    min-inline-size: 194px;
+    block-size: 103px;
+    object-fit: cover;
+    object-position: center;
 }
