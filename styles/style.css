@@ -57,7 +57,7 @@ ol {
     align-items: flex-end;
     gap: 30px;
     inline-size: 1140px;
-    margin-top: 100px;
+    margin-top: 90px;
 }
 
 .result {
@@ -66,13 +66,8 @@ ol {
 
 .result__video-container {
     position: relative;
-
-    /* inline-size, block-size - мин. и макс размеры блока, не будет больше 711px, и не будет меньше 386px*/
-    inline-size: 711px;
-    block-size: 386px;
-
-    /* margin-block-end в CSS определяет внешний отступ от конечного края элемента по блочной оси.
-    аналог нижнего отступа - margin-block-end*/
+    width: 711px;
+    height: 386px;
     margin-bottom: 16px;
 }
 
@@ -95,7 +90,7 @@ ol {
 }
 
 .search-form__fieldset-title {
-    margin-block-end: 5px;
+    margin-bottom: 7px;
     font-weight: 400;
     font-size: 18px;
 }
@@ -106,12 +101,13 @@ ol {
     gap: 5px;
     width: fit-content;
     cursor: pointer;
+    margin-bottom: 3px;
 }
 
 .visually-hidden {
     position: absolute;
-    inline-size: 1px;
-    block-size: 1px;
+    width: 1px;
+    height: 1px;
     overflow: hidden;
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
@@ -146,11 +142,8 @@ ol {
     justify-content: center;
     align-items: center;
 
-    /* display: block; */
-    /* width: 100% */
-    /* height: 15px; */
-    inline-size: 19px;
-    block-size: 19px;
+    width: 19px;
+    height: 19px;
 
     border: 1px solid #fff;
     padding: 1px;
@@ -200,6 +193,7 @@ ol {
     align-self: flex-end;
     min-inline-size: 194px;
     min-block-size: 34px;
+    margin-bottom: 3px;
 }
 
 .more-button {
@@ -221,7 +215,7 @@ ol {
     font-size: 75px;
     line-height: 0.94;
     text-transform: uppercase;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .content__accent {
@@ -230,19 +224,13 @@ ol {
 
 .content__list-container {
     position: relative;
-    /* Свойство block-size в CSS задаёт размер элемента в направлении блока.
-       аналог width: 298px, height: 298px
-    */
     block-size: 298px;
+    inline-size: 398px;
     overflow: auto;
 }
 
 .content__list {
     position: relative;
-
-    /* Свойство block-size в CSS задаёт размер элемента в направлении блока.
-    аналог width: 298px, height: 298px
-    */
     block-size: 298px;
     overflow: auto;
 }
@@ -300,18 +288,14 @@ ol {
 }
 
 .content__video-card-description {
-    /* line-height: 0.9; */
     line-height: 1;
     line-clamp: 3;
 }
 
 .content__video-card-title {
-    /* под вопросом */
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    /* под вопросом */
-
     margin-block-end: 6px;
     font-family: Oswald, sans-serif;
     font-size: 30px;
@@ -320,7 +304,6 @@ ol {
 }
 
 .content__video-card-thumbnail {
-    /* ширина - 194px, высота - 103px */
     min-inline-size: 194px;
     block-size: 103px;
     object-fit: cover;
