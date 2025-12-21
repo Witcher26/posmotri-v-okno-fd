@@ -1,6 +1,10 @@
-https://github.com/Witcher26/posmotri-v-okno-fd
+[https://github.com/Witcher26/posmotri-v-okno-fd](https://witcher26.github.io/posmotri-v-okno-fd/)
 
 # Яндекс Практикум, практическая работа 2-го Спринта: "Посмотри В Окно"
+
+### Описание
+
+Данное приложение позволяет "выглянуть" из окон самых разных городов мира.
 
 ## Оглавление
 
@@ -10,7 +14,3 @@ https://github.com/Witcher26/posmotri-v-okno-fd
 ### Скриншот
 
 ![](./screenshot_desktop.png)
-
-### Описание
-
-Данное приложение позволяет "выглянуть" из окон самых разных городов мира.
